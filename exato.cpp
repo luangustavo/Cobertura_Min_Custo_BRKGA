@@ -82,7 +82,7 @@ int main(int argc, char** argv)
 		// Criando as variáveis binárias
 		IloIntVarArray z(env, n_ant, 0, 1);
 		IloNumVarArray x(env, n_ant, 0, max_x);
-		IloNumVarArray y(env, n_ant, 0, max_x);
+		IloNumVarArray y(env, n_ant, 0, max_y);
 
 		IloArray<IloIntVarArray> p(env, n_ant);
 		for (int i = 0;i < n_ant;i++)
