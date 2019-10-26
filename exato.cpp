@@ -48,7 +48,7 @@ int main(int argc, char** argv)
 
 		else cout << "Unable to open file";
 
-		//Lendo o arquivo de pontos
+		//Lendo o arquivo de antenas
 		ifstream fileAntenas("entrada_antenas.txt");
 		if (fileAntenas.is_open())
 		{
