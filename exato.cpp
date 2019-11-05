@@ -10,6 +10,8 @@ int main(int argc, char** argv)
 
 	try
 	{
+		double time = 900.0; //15 min
+		//double memory = 1000.0;
 		vector<double> Px;
 		vector<double> Py;
 		vector<double> custos;
@@ -78,6 +80,11 @@ int main(int argc, char** argv)
 
 		IloModel antena(env, "Problema da Antenas");
 		IloCplex cplex(antena);
+		
+		//Limites de Tempo e Memória
+		
+		cplex.setParam(IloCplex::TiLim, time);
+		//cplex.setParam(IloCplex::TreLim, memory);
 
 		// Criando as variáveis binárias
 		IloIntVarArray z(env, n_ant, 0, 1);
